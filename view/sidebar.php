@@ -1,106 +1,157 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+include ("../controller/headSidebar.php")
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/sidebar.css">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+?>
 
-    <title> Store Fix</title>
-</head>
+<aside id="sidebar">
+    <div class="d-flex">
+        <button class="toggle-btn" type="button">
+            <i class="lni lni-grid-alt"></i>
+        </button>
+        <div class="sidebar-logo">
+            <a href="#">StoreFix</a>
+        </div>
+    </div>
+    <ul class="sidebar-nav">
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+                <i class="lni lni-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                data-bs-target="#productos" aria-expanded="false" aria-controls="auth">
 
-<body>
-    <div class="wrapper">
-        <aside id="sidebar">
-            <div class="d-flex h-auto">
-                <button class="toggle-btn" type="button">
-                    <i class="lni lni-grid-alt"></i>
-                </button>
-                <div class="sidebar-logo">
-                    <a href="#">StoreFix</a>
-                </div>
-            </div>
-            <ul class="sidebar-nav">
+                <i class="lni lni-package"></i>
+                <span>Productos</span>
+            </a>
+            <ul id="productos" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                        <span>Profile</span>
-                    </a>
+                    <a href="listaProductos.php" class="sidebar-link">Lista Productos</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="lni lni-agenda"></i>
-                        <span>Task</span>
-                    </a>
+                    <a href="#" class="sidebar-link">Categoría Productos</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                        <i class="lni lni-protection"></i>
-                        <span>Administrador</span>
-                    </a>
-                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Login</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Register</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
-                        <i class="lni lni-layout"></i>
-                        <span>Multi Level</span>
-                    </a>
-                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
-                                Two Links
-                            </a>
-                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Link 1</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Link 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="lni lni-popup"></i>
-                        <span>Notification</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="lni lni-cog"></i>
-                        <span>Configuraciones</span>
-                    </a>
+                    <a href="#" class="sidebar-link">Nuevo Producto</a>
                 </li>
             </ul>
-            <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
-                    <i class="lni lni-exit"></i>
-                    <span>Logout</span>
-                </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+                <i class="lni lni-user"></i>
+                <span>Clientes</span>
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                data-bs-target="#venta" aria-expanded="false" aria-controls="auth">
 
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-                crossorigin="anonymous"></script>
+                <i class="lni lni-cart"></i>
+                <span>Venta</span>
+            </a>
+            <ul id="venta" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Nueva Cotización</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Lista Cotizaciónes</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Ordenes Confirmadas</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Pendientes de Pago</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Pagadas</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Anuladas</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                data-bs-target="#bodega" aria-expanded="false" aria-controls="auth">
+                <i class="lni lni-home"></i>
+                <span>Bodega</span>
+            </a>
+            <ul id="bodega" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Pedidos Encolados</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Despacho Orden de Venta</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Seguimiento Orden de Venta</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Todos los Pedidos</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sidebar-item">
+        <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+        data-bs-target="#dashboards" aria-expanded="false" aria-controls="auth">
+                <i class="lni lni-clipboard"></i>
+                <span>Dashboards</span>
+            </a>
+            <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Bodega</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Tesorería</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Gerencia</a>
+                </li> 
+            </ul>
+
+        </li>
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                data-bs-target="#admin" aria-expanded="false" aria-controls="multi">
+                <i class="lni lni-protection"></i>
+                <span>Admin</span>
+            </a>
+            <ul id="admin" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Adm Usuarios</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Nuevo Usuario</a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Nuevo Distribuiodr</a>
+                </li> 
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Gestion Precios</a>
+                </li> 
+            </ul>
+        </li>
+
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+                <i class="lni lni-cog"></i>
+                <span>Setting</span>
+            </a>
+        </li>
+    </ul>
+    <div class="sidebar-footer">
+        <a href="#" class="sidebar-link">
+            <i class="lni lni-exit"></i>
+            <span>Logout</span>
+        </a>
+    </div>
+</aside>
 
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script src="../assets/js/sidebarScript.js"></script>

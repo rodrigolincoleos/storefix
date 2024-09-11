@@ -10,7 +10,6 @@ class LoginController
 
             $usuario = $_POST["LoginName"];
             $password = $_POST["LoginClave"];
-            $res='inicio';
             if (empty($usuario) and empty($password)) { ?>
                 <div class='alert alert-danger'>los campos están vacíos</div>
                 <div><?= $usuario ?></div>
@@ -29,7 +28,6 @@ class LoginController
                 <?php }
             }
             
-        return $res;
         }
 
     }
