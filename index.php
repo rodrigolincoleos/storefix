@@ -61,11 +61,9 @@
     <form method="POST" class="LoginParametros">
 
       <?php
-      
       require_once("controller/loginController.php");
       $log=new LoginController();
       $log->login();
-
       ?>
 
       <div class="row align-items-center">

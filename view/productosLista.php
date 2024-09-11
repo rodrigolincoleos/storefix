@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
 <?php 
-include("../controller/headListaProducto.php"); 
-require_once "../model/productos.php";
-$res  = new Productos();
+include ("partials/headListaProducto.php"); 
+require "../model/productos.php";
+$res=new Productos();
 ?>
 
 <body>
   <div class="wrapper">
     <?php
-    include("../view/sidebar.php");
+    include("../view/partials/sidebar.php");
     ?>
     <div class="main p-3">
       <div class="text-center">
@@ -35,7 +35,7 @@ $res  = new Productos();
               <tbody id='table'></tbody>
             </table>
           </div>
-          <?= $res->listar() ?>
+          <?= $res->listar(); ?>
         </div>
     </div>
     

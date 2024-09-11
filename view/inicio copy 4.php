@@ -3,9 +3,7 @@
 <body>
   <div class="wrapper">
     <?php
-    include("../view/partials/sidebar.php");
-
-
+    include("../view/sidebar.php");
     ?>
     <div class="main p-3">
       <div class="text-center">

@@ -1,6 +1,7 @@
 <?php
 
-include ("../controller/headSidebar.php")
+include ("headSidebar.php");
+include ("../controller/router.php");
 
 ?>
 
@@ -29,13 +30,13 @@ include ("../controller/headSidebar.php")
             </a>
             <ul id="productos" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item">
-                    <a href="listaProductos.php" class="sidebar-link">Lista Productos</a>
+                    <a href="/productosLista" class="sidebar-link">Lista Productos</a>
+                </li>
+                <li class="/sidebar-item">
+                    <a href="productosCategoria" class="sidebar-link">Categoría Productos</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Categoría Productos</a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Nuevo Producto</a>
+                    <a href="/productosCrear" class="sidebar-link">Nuevo Producto</a>
                 </li>
             </ul>
         </li>
@@ -54,22 +55,22 @@ include ("../controller/headSidebar.php")
             </a>
             <ul id="venta" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Nueva Cotización</a>
+                    <a href="/ventasNueva" class="sidebar-link">Nueva Cotización</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Lista Cotizaciónes</a>
+                    <a href="/ventaLista" class="sidebar-link">Lista Cotizaciónes</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Ordenes Confirmadas</a>
+                    <a href="/ventasOrdenesConfirmadas" class="sidebar-link">Ordenes Confirmadas</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Pendientes de Pago</a>
+                    <a href="/ventasPendientes" class="sidebar-link">Pendientes de Pago</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Pagadas</a>
+                    <a href="/ventasPagadas" class="sidebar-link">Pagadas</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Anuladas</a>
+                    <a href="/ventasAnuladas" class="sidebar-link">Anuladas</a>
                 </li>
             </ul>
         </li>
@@ -81,16 +82,16 @@ include ("../controller/headSidebar.php")
             </a>
             <ul id="bodega" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Pedidos Encolados</a>
+                    <a href="bodegaEncolados" class="sidebar-link">Pedidos Encolados</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Despacho Orden de Venta</a>
+                    <a href="/bodegaDespacho" class="sidebar-link">Despacho Orden de Venta</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Seguimiento Orden de Venta</a>
+                    <a href="/bodegaSeguimiento" class="sidebar-link">Seguimiento Orden de Venta</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Todos los Pedidos</a>
+                    <a href="/bodegaLista" class="sidebar-link">Todos los Pedidos</a>
                 </li>
             </ul>
         </li>
@@ -102,13 +103,13 @@ include ("../controller/headSidebar.php")
             </a>
             <ul id="dashboards" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Bodega</a>
+                    <a href="/dashboardBodega" class="sidebar-link">Bodega</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Tesorería</a>
+                    <a href="/dashboardTesoreria" class="sidebar-link">Tesorería</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Gerencia</a>
+                    <a href="/dashboardGerencia" class="sidebar-link">Gerencia</a>
                 </li> 
             </ul>
 
@@ -121,16 +122,16 @@ include ("../controller/headSidebar.php")
             </a>
             <ul id="admin" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Adm Usuarios</a>
+                    <a href="/adminUsuarios" class="sidebar-link">Adm Usuarios</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Nuevo Usuario</a>
+                    <a href="/adminCrearUsuario" class="sidebar-link">Nuevo Usuario</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Nuevo Distribuiodr</a>
+                    <a href="/adminCrearDistribuidor" class="sidebar-link">Nuevo Distribuiodr</a>
                 </li> 
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">Gestion Precios</a>
+                    <a href="/adminGestion" class="sidebar-link">Gestion Precios</a>
                 </li> 
             </ul>
         </li>
