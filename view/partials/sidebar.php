@@ -1,8 +1,6 @@
 <?php
 
 include ("headSidebar.php");
-include ("../controller/router.php");
-
 ?>
 
 <aside id="sidebar">
@@ -30,7 +28,7 @@ include ("../controller/router.php");
             </a>
             <ul id="productos" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                 <li class="sidebar-item">
-                    <a href="/productosLista" class="sidebar-link">Lista Productos</a>
+                    <a href="/view/productosLista.php" class="sidebar-link">Lista Productos</a>
                 </li>
                 <li class="/sidebar-item">
                     <a href="productosCategoria" class="sidebar-link">Categoría Productos</a>
