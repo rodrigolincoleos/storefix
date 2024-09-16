@@ -10,6 +10,6 @@ if ($sql->num_rows > 0) {
   while ($fila = $sql->fetch_row()) {
     $datos[]= $fila;
   }
-echo json_encode(["data"=>$datos]);
+return json_encode($datos);
   
 } 

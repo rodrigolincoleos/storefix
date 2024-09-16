@@ -31,10 +31,10 @@ include ("headSidebar.php");
                     <a href="/view/productosLista.php" class="sidebar-link">Lista Productos</a>
                 </li>
                 <li class="/sidebar-item">
-                    <a href="productosCategoria" class="sidebar-link">Categoría Productos</a>
+                    <a href="/view/productosCategorias.php" class="sidebar-link">Categoría Productos</a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="/productosCrear" class="sidebar-link">Nuevo Producto</a>
+                    <a href="/view/productoNuevo.php" class="sidebar-link">Nuevo Producto</a>
                 </li>
             </ul>
         </li>
